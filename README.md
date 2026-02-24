@@ -1,11 +1,83 @@
-<div align="center">
+# 开奖大师 (Lottery Master)
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+这是一个基于 React + Vite + Tailwind CSS 的开奖分析与策略应用。
 
-  <h1>Built with AI Studio</h2>
+## 功能特点
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+- **实时开奖数据**: 自动获取最新的开奖结果。
+- **智能推荐**: 基于历史数据生成号码推荐。
+- **倍投策略**: 自动计算倍投计划和盈亏情况。
+- **语音播报**: 支持推荐结果的语音提示。
+- **数据统计**: 包含冷热号码分析、大小单双统计等。
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+## 本地运行指南
 
-</div>
+如果您想在本地计算机上运行此应用，请按照以下步骤操作：
+
+### 1. 环境准备
+
+确保您的计算机已安装：
+- [Node.js](https://nodejs.org/) (建议版本 v18 或更高)
+- npm (通常随 Node.js 一起安装)
+
+### 2. 获取代码
+
+将本项目的所有文件下载到您的本地目录。
+
+### 3. 安装依赖
+
+在项目根目录下打开终端（命令行），运行以下命令安装所需的依赖包：
+
+```bash
+npm install
+```
+
+### 4. 配置环境变量
+
+在项目根目录下创建一个名为 `.env` 的文件（可以复制 `.env.example`），并填入必要的配置：
+
+```env
+# 必需：Gemini API 密钥 (用于智能分析)
+GEMINI_API_KEY="your_api_key_here"
+
+# 可选：目标开奖网站地址
+TARGET_DRAW_URL=""
+```
+
+### 5. 启动开发服务器
+
+安装完成后，运行以下命令启动本地开发服务器：
+
+```bash
+npm run dev
+```
+
+启动成功后，您可以直接双击项目根目录下的 **`访问程序.html`** 文件，或者在浏览器中访问 `http://localhost:3000` 即可使用应用。
+
+### 6. 构建生产版本
+
+如果您需要部署应用，可以运行构建命令：
+
+```bash
+npm run build
+```
+
+构建后的文件将生成在 `dist` 目录下。
+
+## 技术栈
+
+- **前端框架**: React 18
+- **构建工具**: Vite
+- **样式库**: Tailwind CSS
+- **图标库**: Lucide React
+- **动画库**: Motion (Framer Motion)
+- **后端服务**: Express (用于代理请求和API服务)
+
+## 注意事项
+
+- 本应用包含后端服务 (`server.ts`)，用于处理跨域请求和数据获取，请确保通过 `npm run dev` 启动，而不是仅启动前端。
+- 首次运行时，应用会自动生成一些初始数据。
+
+## 许可证
+
+MIT

@@ -1,0 +1,5 @@
+{
+  "name": "积分开奖助手 (Points Draw Assistant)",
+  "description": "实时读取开奖记录，AI 智能分析下注策略，5分钟自动更新。",
+  "requestFramePermissions": []
+}
